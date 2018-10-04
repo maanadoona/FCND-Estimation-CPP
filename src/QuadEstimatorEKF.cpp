@@ -73,8 +73,8 @@ void QuadEstimatorEKF::Init()
   rollErr = pitchErr = maxEuler = 0;
   posErrorMag = velErrorMag = 0;
 
-  printf("%f, %f, [%f, %f, %f, %f, %f, %f], [%f], [%f, %f, %f, %f, %f, %f, %f]\n", attitudeTau, dtIMU, R_GPS(0, 0), R_GPS(1, 1), R_GPS(2, 2), R_GPS(3, 3), R_GPS(4, 4), R_GPS(5, 5),
-         R_Mag(0, 0), Q(0, 0), Q(1, 1), Q(2, 2), Q(3, 3), Q(4, 4), Q(5, 5), Q(6, 6));
+  //printf("%f, %f, [%f, %f, %f, %f, %f, %f], [%f], [%f, %f, %f, %f, %f, %f, %f]\n", attitudeTau, dtIMU, R_GPS(0, 0), R_GPS(1, 1), R_GPS(2, 2), R_GPS(3, 3), R_GPS(4, 4), R_GPS(5, 5),
+         //R_Mag(0, 0), Q(0, 0), Q(1, 1), Q(2, 2), Q(3, 3), Q(4, 4), Q(5, 5), Q(6, 6));
 }
 
 void QuadEstimatorEKF::UpdateFromIMU(V3F accel, V3F gyro)
