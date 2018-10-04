@@ -15,13 +15,13 @@ QYawStd = .08
 
 # GPS measurement std deviations
 GPSPosXYStd = 1
-GPSPosZStd = 3
-#GPSPosZStd = 300
+#GPSPosZStd = 3
+GPSPosZStd = 300
 GPSVelXYStd = .1
 GPSVelZStd = .3
 
 # Magnetometer
-MagYawStd = .1
+MagYawStd = .5
 
 dtIMU = 0.002
 attitudeTau = 100

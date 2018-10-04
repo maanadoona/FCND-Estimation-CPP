@@ -32,13 +32,23 @@ QuadEstimatorEKF.attitudeTau = 100
 Commands += Toggle.ActualTrajectory
 
 Commands += SetTitle(1,"Y Pos/Vel: True vs Predicted")
-Commands += Plot(1,Quad.Pos.Y,"true Y")
-Commands += Plot(1,Quad.Est.Y,"est Y")
-Commands += Plot(1,Quad.Vel.Y,"true vY")
-Commands += Plot(1,Quad.Est.VY,"est vY")
+Commands += Plot(1,Quad.Pos.Y,"Quad.Pos.Y")
+Commands += Plot(1,Quad.Est.Y,"Quad.Est.Y")
+Commands += Plot(1,Quad.Vel.Y,"Quad.Vel.Y")
+Commands += Plot(1,Quad.Est.VY,"Quad.Est.VY")
+
+#Commands += SetTitle(1,"Y Pos/Vel: True vs Predicted")
+#Commands += Plot(1,Quad.Est.S.x,"Quad.Est.S.x")
 
 Commands += SetTitle(2,"Z Pos/Vel: True vs Predicted")
-Commands += Plot(2,Quad.Pos.Z,"true z")
-Commands += Plot(2,Quad.Est.Z,"est z")
-Commands += Plot(2,Quad.Vel.Z,"true vz")
-Commands += Plot(2,Quad.Est.VZ,"est vz")
+Commands += Plot(2,Quad.Pos.Z,"Quad.Pos.Z")
+Commands += Plot(2,Quad.Est.Z,"Quad.Est.Z")
+Commands += Plot(2,Quad.Vel.Z,"Quad.Vel.Z")
+Commands += Plot(2,Quad.Est.VZ,"Quad.Est.VZ")
+
+#Commands += SetTitle(2,"Z Pos/Vel: True vs Predicted")
+#Commands += Plot(2,Quad.Est.S.vx,"Quad.Est.S.vx")
+
+
+
+
