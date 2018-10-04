@@ -72,21 +72,18 @@ Case 1) Ideal estimator
 Quad.UseIdealEstimator = 1
 SimIMU.AccelStd = 0,0,0
 SimIMU.GyroStd = 0,0,0
-
 ![alt text][image11_1]
 
-Case 2) Realistic estimator with ideal IMU 
+Case 2) Realistic estimator with ideal IMU
 Quad.UseIdealEstimator = 0
 SimIMU.AccelStd = 0,0,0
 SimIMU.GyroStd = 0,0,0
-
 ![alt text][image11_2]
 
 Case 3) Realistic estimator with realistic IMU
 Quad.UseIdealEstimator = 0
 #SimIMU.AccelStd = 0,0,0
 #SimIMU.GyroStd = 0,0,0
-
 ![alt text][image11_3]
 
 
