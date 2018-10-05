@@ -354,15 +354,9 @@ void QuadEstimatorEKF::UpdateFromGPS(V3F pos, V3F vel)
          zdot]
    */
 
-  zFromX(0) = ekfState(0);
-  zFromX(1) = ekfState(1);
-  zFromX(2) = ekfState(2);
-  zFromX(3) = ekfState(3);
-  zFromX(4) = ekfState(4);
-  zFromX(5) = ekfState(5);
-
   for ( int i = 0; i < 6; i++) {
     hPrime(i,i) = 1;
+    zFromX(i) = ekfState(i);
   }
 
   //printf("R_GPS:[%f, %f, %f, %f, %f, %f]\n", R_GPS(0, 0), R_GPS(1, 1), R_GPS(2, 2), R_GPS(3, 3), R_GPS(4, 4), R_GPS(5, 5));
@@ -394,11 +388,11 @@ void QuadEstimatorEKF::UpdateFromMag(float magYaw)
    */
 
   zFromX(0) = ekfState(6);
-  float diff = magYaw - ekfState(6);
+  float diff = magYaw - zFromX(0);
   if ( diff > F_PI ) {
-    zFromX(0) += 2.f*F_PI;
+    z(0) -= 2.f*F_PI;
   } else if ( diff < -F_PI ) {
-    zFromX(0) -= 2.f*F_PI;
+    z(0) += 2.f*F_PI;
   }
 
   hPrime(0, 6) = 1;
